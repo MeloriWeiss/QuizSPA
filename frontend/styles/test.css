@@ -1,0 +1,171 @@
+.test {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.test-pre-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #DCDCF3;
+}
+
+.test-progress-bar {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    display: flex;
+}
+
+.test-progress-bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.test-progress-bar-item:not(:first-child) {
+    margin-left: 130px;
+}
+
+.test-progress-bar-item:not(:last-child):before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 183px;
+    height: 6px;
+    background-color: #DCDCF3;
+    left: 32px;
+    top: 10px;
+}
+
+.test-progress-bar-item.complete:not(:last-child)::before {
+    background-color: #6933DC;
+}
+
+.test-progress-bar-item-circle {
+    width: 26px;
+    height: 26px;
+    background-color: #DCDCF3;
+    border-radius: 50%;
+}
+
+.test-progress-bar-item.complete .test-progress-bar-item-circle,
+.test-progress-bar-item.active .test-progress-bar-item-circle {
+    background-color: #6933DC;
+}
+
+.test-progress-bar-item.active::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    width: 14px;
+    height: 14px;
+    background-color: #DCDCF3;
+    top: 6px;
+}
+
+.test-progress-bar-item-text {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+.test-question-title {
+    font-family: 'Museo Sans Cyrl Bold', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+}
+
+.test-question-title span {
+    color: #6933DC;
+}
+
+.test-question-options {
+    margin-top: 40px;
+    min-height: 356px;
+}
+
+.test-question-option {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.test-question-option label {
+    cursor: pointer;
+}
+
+.test-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test-time {
+    display: flex;
+    align-items: center;
+}
+
+.test-time-text {
+    font-size: 17px;
+    line-height: 20px;
+    color: #6933DC;
+    margin-right: 15px;
+}
+
+.test-time-clock {
+    background-image: url("../images/time.svg");
+    background-size: cover;
+    background-position: center;
+    width: 27px;
+    height: 29px;
+    font-size: 10px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.button {
+    width: 132px;
+}
+
+.pass-question {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.pass-question button {
+    font-size: 17px;
+    line-height: 20px;
+    color: #6933DC;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.pass-question button:disabled {
+    color: #DCDCF3;
+    cursor: not-allowed;
+}
+
+.pass-question button:hover:not(:disabled) {
+    text-decoration: underline;
+}
+
+.pass-question button svg {
+    margin-left: 13px;
+}
+
+.pass-question button:disabled #non-disabled-arrow {
+    margin-left: 13px;
+    display: none;
+}
+
+.pass-question button:not(:disabled) #disabled-arrow {
+    margin-left: 13px;
+    display: none;
+}
